@@ -1,0 +1,83 @@
+@import 'var.scss';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    &::selection{
+      background: transparentize( #42b883,0.5);
+    }
+  }
+  body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: $darkPrimaryColor;
+  }
+  a{
+    text-decoration: none;
+  }
+  header{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background-color: $darkerPrimaryColor;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+    .links-container{
+        display: flex;
+        margin-right: 30px;
+        .link{
+            display: block;
+            text-decoration: none;
+            color: $textColor;
+            margin-left: 20px;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid $darkPrimaryColor;
+            &:hover{
+                border: 1px solid transparent;
+                background-color: $accentColor;
+            }
+        }
+        .genre-list-container{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            .genre-list{
+                position: absolute;
+                top: 100%;
+                display: none;
+                z-index: 9;
+                background-color: $primaryAccentColor;
+                padding: 10px 20px;
+                border-bottom-left-radius: 8px ;
+                border-bottom-right-radius: 8px;
+                p{
+                    color: $textColor;
+                    margin-bottom: 10px;
+                    padding: 5px 10px;
+                    border: 1px solid $darkerPrimaryColor;
+                    border-radius: 8px;
+                    &:hover{
+                        background-color: $accentColor;
+                    }
+                }
+                &:hover{
+                    display: block;
+                }
+            }
+            .genre:hover + .genre-list{
+                display: grid;
+            } 
+        }
+    }
+    .logo-whole{
+      font-family: 'Sofia', sans-serif;
+      color: $textColor;
+      font-size: 28px;
+      margin-left: 30px;
+      .logo-7x{
+        color: $accentColor;
+      }
+    }
+  }

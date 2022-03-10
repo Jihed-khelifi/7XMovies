@@ -1,0 +1,31 @@
+.movie-detail{
+    padding: 16px;
+    h2{
+        color: whitesmoke;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 16px;
+
+    }
+    .featured-img{
+        display: block;
+        max-width: 200px;
+        margin-bottom: 16px;
+    }
+    p{
+        color: white;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}
+.player{
+    position: relative;
+    width: 100vw;
+    min-height:500px ;
+    display: grid;
+    place-items: center;
+    iframe{
+        width: 1000px;
+        height: 500px;
+    }
+}
